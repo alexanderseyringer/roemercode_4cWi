@@ -48,13 +48,15 @@ table {
 }
 
 .flexendebox {
+    border: 3px;
+    border-style: solid;
+    border-color: black;
     height: 250px;
-    width: 750px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     align-items: stretch;
-    position: absolute;
+    position: relative;
 }
 
 .greenboxwithbox {
@@ -64,6 +66,12 @@ table {
     width: 150px;
     height: 150px;
     position: relative;
+    top: 5%;
+    left: 5%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .littlegreenbox {
@@ -72,9 +80,6 @@ table {
     border-color: limegreen;
     width: 50px;
     height: 50px;
-    position: absolute;
-    left: 33%;
-    top: 28%
 }
 
 .item1 {
@@ -95,4 +100,19 @@ table {
     bottom: 0px;
     right: 0px;
     background-color: lightblue;
+}
+
+.blackinnerbox {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.blackouterbox {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    top: 25%;
+    right: 15%;
 }
