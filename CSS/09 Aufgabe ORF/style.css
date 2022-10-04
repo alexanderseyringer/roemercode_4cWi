@@ -127,3 +127,16 @@ body {
     position: relative;
     width: 100%;
 }
+
+.contentdiv {
+    margin-left: 5%;
+    background-color: white;  
+    width: 860px;
+    position: relative;
+    font-size: 12px;
+}
+
+.contentimage {
+    width: 30;
+    height: 30;
+}
