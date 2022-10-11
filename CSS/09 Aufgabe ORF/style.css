@@ -138,9 +138,52 @@ body {
     width: 860px;
     position: relative;
     font-size: 12px;
+    margin-top: 5px;
 }
 
-.contentimage {
-    width: 30;
-    height: 30;
+.lead {
+    color: black;
+    position: relative;
+    background-color: white;
+    width: 75%;
+    height: auto;
+    left: 10%;
+    top: -100px;
+}
+
+.keyword {
+    margin: 15px;
+    color: gray;
+    font-weight: lighter;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.aufschneider {
+    font-size: 18px;
+    margin: 15px;
+    font-weight: inherit;
+    text-align: justify;
+}
+
+.zeitstempel {
+    font-size: 15px;
+    margin: 15px;
+    font-weight: lighter;
+    color: darkcyan;
+}
+
+.schtoryschtory {
+    background-color: white;
+    height: auto;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
