@@ -92,6 +92,7 @@ body {
 .logoleiste {
     width: 100%;
     margin: 15px;
+    margin-left: 5%;
     display: flex;
 
 }
@@ -117,7 +118,7 @@ body {
     width: 110px;
     justify-content: end;
     position: absolute;
-    right: 0px;
+    right: 5%;
 }
 
 .heading2 {
@@ -186,4 +187,5 @@ body {
     padding: 10px;
     margin-left: 50px;
     margin-right: 50px;
+    text-align: left;
 }
