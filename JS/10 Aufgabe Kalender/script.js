@@ -1,7 +1,10 @@
-let month = 1;
-let startingDay = 2;
+let month = 2;
 let monthLength = 0;
-
+let startingDayOfWeek = 3;
+//let dayLettering = "| MO | DI | MI | DO | FR | SA | SO |";
+let empty = "|    ";
+let daysInAWeek = 7;
+let dayOfMonth = 1;
 
 switch (month) {
     case 1:
@@ -29,7 +32,7 @@ switch (month) {
         monthLength = 31;
         break;
     case 9:
-        monthLength = 31;
+        monthLength = 30;
         break;
      case 10:
         monthLength = 31;
@@ -45,11 +48,30 @@ switch (month) {
         break;
 }
 
-function lettering() {
-    let dayLettering = ("| " + "MO" + " |" + " " + "| " + "DI" + " |" + " " + "| " + "MI" + " |" + " " + "| " + "DO" + " |" + " " + "| " + "FR" + " |" + " " + "| " + "SA" + " |" + " " + "| " + "SO" + " |");
-    return dayLettering;
-}
+let outputLine = "";
 
-/*for (let i = 1; i < monthLength; i++) {
-       console.log(monthLength); 
-} */
+for (let i = 0; i < 5; i++) {
+    for (let j = 1; j <= daysInAWeek; j++) {
+        if(j < startingDayOfWeek) {
+            outputLine += empty
+        }
+
+        else {
+            if(j <= 10) {
+                outputLine += "|  " + dayOfMonth;
+                dayOfMonth++;
+            }
+
+            else {
+                outputLine += "| " + dayOfMonth;
+                dayOfMonth++;
+            }
+            
+        }
+
+        if(j % 7 == 0) {
+            outputLine += "| \n";
+            console.log(outputLine);
+        }
+    } 
+}
