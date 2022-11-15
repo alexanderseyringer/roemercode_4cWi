@@ -59,17 +59,17 @@ let outputLine = "";
 
         else {
             if(dayOfMonth < 10) {
-                outputLine += "|   " + dayOfMonth;
+                outputLine += "|  " + dayOfMonth + " ";
                 dayOfMonth++;
             }
 
             else if(dayOfMonth == 10) {
-                outputLine += "|  " + dayOfMonth;
+                outputLine += "| " + dayOfMonth + " ";
                 dayOfMonth++;
             }
 
             else if (dayOfMonth > 10) {
-                outputLine += "|  " + dayOfMonth;
+                outputLine += "| " + dayOfMonth + " ";
                 dayOfMonth++;
             }
             
