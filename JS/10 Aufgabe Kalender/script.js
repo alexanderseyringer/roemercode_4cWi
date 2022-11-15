@@ -48,30 +48,36 @@ switch (month) {
         break;
 }
 
+console.log("| MO | DI | MI | DO | FR | SA | SO |");
+
 let outputLine = "";
 
-for (let i = 0; i < 5; i++) {
-    for (let j = 1; j <= daysInAWeek; j++) {
-        if(j < startingDayOfWeek) {
+    for (let j = 1; j <= 35; j++) {
+        if(j < startingDayOfWeek || dayOfMonth > monthLength) {
             outputLine += empty
         }
 
         else {
-            if(j <= 10) {
+            if(dayOfMonth < 10) {
+                outputLine += "|   " + dayOfMonth;
+                dayOfMonth++;
+            }
+
+            else if(dayOfMonth == 10) {
                 outputLine += "|  " + dayOfMonth;
                 dayOfMonth++;
             }
 
-            else {
-                outputLine += "| " + dayOfMonth;
+            else if (dayOfMonth > 10) {
+                outputLine += "|  " + dayOfMonth;
                 dayOfMonth++;
             }
             
         }
 
         if(j % 7 == 0) {
-            outputLine += "| \n";
+            outputLine += "|";
             console.log(outputLine);
+            outputLine = "";
         }
     } 
-}
