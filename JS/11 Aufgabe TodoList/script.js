@@ -24,7 +24,7 @@ function addTasks() {
 
 function checkTask(element) {
     let index = element.attributes["data-index"].value;
-    let isChecked = element.checkerChecked;
+    let isChecked = element.checked;
 
     tasksArray[index].isDone = isChecked;
     writeTasks();
@@ -39,7 +39,7 @@ function getTasksToHTML() {
         if(element.isDone) {
             checkerChecked = "checked";
         }
-        html += "<li><input onClick='checkTask' name='checkbox' data-index='" + index + "'input type='checkbox'" + checkerChecked + "/>" + " " + element.name + " - " + element.responsible + "";
+        html += "<li><input onClick='checkTask()' name='checkbox' data-index='" + index + "'input type='checkbox'" + checkerChecked + "/>" + " " + element.name + " - " + element.responsible + "";
         index++;
     });
 
