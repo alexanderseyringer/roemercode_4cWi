@@ -1,22 +1,29 @@
-let EURUSD = {originalCurrency: "EUR", targetCurrency: "USD", exchangeRate: 1.05};
-let LIRAUSD = {originalCurrency: "LIRA", targetCurrency: "USD", exchangeRate: 0.054};
+let ForeignExchangeRate = {USD: 1.05, LIRA: 0.054};
+let originalAmount = 0;
+let originCurrency = "";
+let targetCurrency = "";
+let targetCurrencyAmount = 0;
 
-let foreignExchangeRates = [EURUSD, LIRAUSD];
-
-document.getElementById("calculate").addEventListener("click", calculate());
+document.getElementById("calculate").addEventListener("click", function() {
+    getInputs();
+    calculate();
+    write();
+});
 
 function getInputs() {
-    let originalAmount = document.getElementById("originCurrencyValue").value;
-    let originCurrency = document.getElementById("originCurrency").value;
-    let targetCurrency = document.getElementById("targetCurrency").value;
-    return originalAmount, originCurrency, targetCurrency;
+    originalAmount = document.getElementById("originCurrencyValue").value;
+    originCurrency = document.getElementById("originCurrency").value;
+    targetCurrency = document.getElementById("targetCurrency").value;
 }
 
 function calculate() {
     if (originCurrency == "EUR") {
         if (targetCurrency == "USD") {
-            targetCurrencyAmount = getInputs.originalAmount * foreignExchangeRates.exchangeRate;
+            targetCurrencyAmount = originalAmount * ForeignExchangeRate.USD;
         }
     }
-    return targetCurrencyAmount;
+}
+
+function write() {
+    document.getElementById("targetCurrencyAmount").value = targetCurrencyAmount;
 }
