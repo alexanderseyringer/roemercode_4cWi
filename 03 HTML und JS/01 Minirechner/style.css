@@ -1,0 +1,22 @@
+body {
+    font-family: 'Segoe UI';
+    font-size: 20px;
+    background-color:cornsilk
+}
+
+.inputs {
+    position: absolute;
+    right: 50%;
+}
+
+.buttons {
+    position: absolute;
+    right: 30%;
+}
+
+.content {
+    text-align: center;
+    top: 5%;
+    right: 55%;
+    position: absolute;
+}
