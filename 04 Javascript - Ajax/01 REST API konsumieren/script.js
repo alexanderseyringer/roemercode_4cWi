@@ -1,8 +1,8 @@
-document.getElementById("loader").addEventListener("click", function() {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-    .then((result)=> {
+document.getElementById("loader").addEventListener("click", function(){
+    fetch("https://jsonplaceholder.typicode.com/todos").then((result)=> {
         result.json().then((data)=>{
             getHTMLForToDos(data);
+            console.log(data.title);
         })
     })
 })
