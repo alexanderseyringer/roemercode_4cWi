@@ -73,6 +73,9 @@ body {
 .content {
     margin: 1ch;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .greenhead {
@@ -83,4 +86,19 @@ body {
     border-top-right-radius: 3ch;
     bottom: 0cm;
     position: absolute;
+    row-gap: 200px;
+    column-gap: 100px;
+}
+
+.gruppenbox {
+    width: 30px;
+    height: 30px;
+}
+
+.box1 {
+    grid-column-start: span 1;
+}
+
+.box2 {
+    grid-column-start: span 2;
 }
